@@ -1,0 +1,77 @@
+@import './custom.less';
+
+@content2: AboutPage2;
+.@{content2} {
+  &-wrapper {
+    height: 130px;
+    overflow: hidden;
+  }
+  > h1 {
+    text-align: center;
+    position: relative;
+    top: 15%;
+    margin: auto;
+  }
+  > ul {
+    width: 60%;
+    margin: auto;
+    position: relative;
+    top: 25%;
+    padding: 20px 0;
+    > li {
+      width: 20%;
+      display: inline-block;
+      text-align: center;
+      .ant-btn{
+        font-size: 15px;
+        height: 35px;
+        width: 90%;
+      }
+      &.queue-anim-leaving {
+        position: relative !important;
+      }
+      .icon {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+      }
+      > h3 {
+        line-height: 32px;
+        margin: 10px auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{content2}-wrapper {
+    height: auto;
+    .@{content2} {
+      width: 90%;
+      max-width: 100%;
+      > h1{
+        top: auto;
+        margin: 40px auto 20px;
+      }
+      > ul {
+        position: inherit;
+        top: 0;
+        bottom:0;
+        left:0;
+        right:0;
+        padding: 0;
+        width: 90%;
+        margin-top: 30px;
+        > li{
+          width: 50%;
+          display: block;
+          float: left;
+          margin: 10px auto;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

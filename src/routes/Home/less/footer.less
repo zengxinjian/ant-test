@@ -1,0 +1,96 @@
+@import './custom.less';
+
+@footer: footer0;
+.@{footer} {
+  background-color: @allbg-color;
+  height: 150px;
+  color: @template-footer-text-color;
+  overflow: hidden;
+  position: relative;
+  .footer-content{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 25px 5% 0;
+    position: relative;
+    .content-text{
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 70px;
+      width: 45%;
+      p{
+        color: #ffffff;
+        font-size: 15px;
+      }
+    }
+  }
+  &-content-img{
+    max-width: 1200px;
+    margin: auto;
+    display: inline-block;
+    img{
+      max-width: 175px;
+    }
+  }
+  &-img{
+    display: inline-block;
+    position: absolute;
+    right: 5%;
+    h2{
+      text-align: center;
+      color: #ffffff;
+      font-size: 15px;
+      margin-top: 5px;
+    }
+    img{
+      width: 90px;
+    }
+  }
+  span {
+    display: block;
+    margin: 20px auto 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{footer} {
+    > div {
+      width: 90%;
+      padding-top: 20px;
+      display: block;
+      margin: auto;
+    }
+    &{
+      height: auto;
+      min-height: 215px;
+    }
+    .content-text{
+      display: block !important;
+      margin-left: 0 !important;
+      margin-top: 25px;
+      width: 80% !important;
+      p{
+        font-size: 14px;
+      }
+    }
+    &-img{
+      img{
+        width: 64px;
+      }
+      h2{
+        font-size: 12px;
+        max-width: 65px;
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 320px){
+  .@{footer} {
+    &{
+      height: auto;
+    }
+  }
+}

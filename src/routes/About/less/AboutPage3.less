@@ -1,0 +1,141 @@
+@import './custom.less';
+
+@content3: AboutPage3;
+.@{content3} {
+  &-wrapper{
+    height: auto;
+  }
+  &-title{
+    text-align: center;
+    padding: 70px 0 30px;
+  }
+  &-img {
+    width: 50%;
+    display: inline-block;
+    overflow: hidden;
+    text-align: right;
+    span {
+      display: inline-block;
+      width: 80%;
+      margin: auto;
+      img {
+        max-width: 400px;
+        vertical-align: middle;
+      }
+    }
+  }
+  &-text {
+    display: inline-block;
+    width: 37%;
+    padding: 0 30px;
+    vertical-align: top;
+    & p {
+      max-width: 385px;
+      text-indent: 27px;
+      color: #909090;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+  }
+  &-form{
+    width: 85%;
+    margin: auto;
+    padding-top: 30px;
+    .rowTitle{
+       background-color: @table-title-bg;
+       color: #ffffff;
+       div{
+         height: 30px;
+         line-height: 30px;
+       }
+       div:nth-child(1){
+         padding-left: 20px;
+       }
+     }
+    .rowContent{
+      background-color: @table-content-bg;
+      color: #222;
+      div{
+        height: 70px;
+        p, span{
+          font-size: 16px;
+          margin: auto;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+        }
+        p{
+          height: 24px;
+        }
+        span{
+          display: inline-block;
+          height: 47px;
+          padding-right: 30px;
+          overflow: hidden;
+        }
+      }
+      div:nth-child(1){
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{content3}-wrapper {
+    margin-bottom: 40px;
+    .@{content3} {
+      overflow: hidden;
+      width: 90%;
+      margin: auto;
+      &-img, &-text {
+        width: 100%;
+        display: block;
+        position: relative;
+        text-align: center;
+      }
+      &-title{
+        padding: 20px 0 0;
+      }
+      &-form{
+        width: 100%;
+        div{
+          p,span{
+            font-size: 13px;
+          }
+        }
+        .rowContent{
+          div{
+            height: 110px;
+            span{
+              height: 75px;
+              padding-right: 10px;
+            }
+          }
+        }
+      }
+      &-img {
+        margin: 20px auto;
+        span {
+          right: 0;
+          left: 0;
+          margin: auto;
+          width: 80%;
+          line-height: 200px;
+        }
+      }
+      &-text {
+        margin-bottom: 20px;
+        p, h1 {
+          width: 100%;
+          top: auto;
+          text-align: left;
+        }
+        h1{
+          margin: 10px auto;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

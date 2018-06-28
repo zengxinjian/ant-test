@@ -1,0 +1,95 @@
+@import './custom.less';
+
+.chainPage7-wrapper{
+  height: 600px !important;
+}
+
+@content7: chainPage7;
+.@{content7} {
+  &-content3{
+    position: relative;
+    top: 90px;
+    text-align: center;
+    h1{
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+    img{
+      width: 75%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .@{content7}-wrapper {
+    height: auto !important;
+    min-height: 320px;
+    .@{content7} {
+      overflow: hidden;
+      width: 90%;
+      margin: auto;
+      > h1, > p {
+        position: relative;
+        top: auto;
+      }
+      > h1 {
+        margin: 40px auto 0;
+        font-size: 24px;
+      }
+      > h2{
+        margin-top: 0;
+        top: 0;
+        font-size: 18px;
+      }
+      &-content1{
+        top: 20px;
+        .content-text{
+          img{
+            width: 75%;
+          }
+          span{
+            width: 50%;
+          }
+          span:nth-child(1){
+            padding-left: 5%;
+          }
+          span:nth-child(2){
+            text-align: right;
+          }
+        }
+      }
+      &-content2{
+        top: 50px;
+        img{
+          width: 100%;
+        }
+      }
+      &-content3{
+        top: 10px;
+        img{
+          width: 100%;
+        }
+      }
+      &-contentWrapper {
+        top: auto;
+        margin: 20px auto;
+        height: auto;
+        ul {
+          > li {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            display: block;
+            h1 {
+              font-size: 20px;
+            }
+            &.queue-anim-leaving {
+              position: relative !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

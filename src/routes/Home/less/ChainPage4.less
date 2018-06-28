@@ -1,0 +1,137 @@
+@import './custom.less';
+
+.chainPage4-wrapper{
+  height: auto !important;
+  padding-top: 5%;
+  min-height: 800px;
+}
+
+@content4: chainPage4;
+.@{content4} {
+  &-wrapper {
+    background-color: #f3f3f3;
+  }
+  & > h1, & > p {
+    position: relative;
+    top: 8%;
+    text-align: center;
+  }
+  &-img-wrapper {
+    width: 85%;
+    top: 15%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    & li {
+      width: 25%;
+      padding: 1%;
+      float: left;
+      & .content-wrapper {
+        display: block;
+        background: #fff;
+        border-radius: 6px;
+        padding: 15px 0 5px;
+        text-align: center;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        transition: box-shadow .3s @ease-out, transform .3s @ease-out;
+        & > span {
+          height: 70%;
+          max-height: 140px;
+          display: block;
+          img{
+            max-width: 140px;
+            max-height: 140px;
+          }
+        }
+        & h2, & h3{
+          font-size: 24px;
+          color: #222;
+          margin: 10px 0 5px;
+        }
+        & h2{
+          padding-left: 15px;
+        }
+        & h3{
+          letter-spacing: 2px;
+        }
+        & div {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          font-size: 15px;
+          line-height: 24px;
+          color: #909090;
+          transition: bottom .3s @ease-out, background .3s @ease-out, color .3s @ease-out, line-height .3s @ease-out;
+        }
+      }
+    }
+  }
+  .ant-btn{
+    position: absolute;
+    background: url("../../../assets/lookMore.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    bottom: 70px;
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    border: 0;
+    left: 0px;
+    right: 0px;
+    margin:auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .chainPage4-wrapper {
+    height: 1300px !important;
+    overflow: hidden;
+    .@{content4} {
+      min-height: 1300px;
+      width: 90%;
+      > h1, > p {
+        position: relative;
+        top: 0;
+      }
+      > h1 {
+        font-size: 24px;
+        margin: 40px auto 20px;
+      }
+      > ul{
+        top: 50px;
+        width: 100%;
+        li {
+          display: block;
+          width: 50%;
+          padding: 2%;
+          .content-wrapper{
+            border: 0;
+            transform: translateY(0);
+            border-radius: 0;
+            box-shadow: 0 0 0 0;
+            height: 270px;
+          }
+          span {
+            height: 110px;
+          }
+          h2, h3{
+            font-size: 18px;
+          }
+          p {
+            position: relative;
+            bottom: 0;
+            font-size: 14px;
+          }
+        }
+      }
+      .ant-btn{
+        width: 100px;
+        height: 35px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,130 @@
+@import './custom.less';
+
+.chainPage6-wrapper{
+  height: 700px !important;
+}
+
+@content6: chainPage6;
+.@{content6} {
+  > h1, > h2 {
+    text-align: center;
+    position: relative;
+    top: 5%;
+  }
+  > h2{
+    margin-top: 30px;
+    font-size: 24px;
+    color: #222;
+  }
+  &-content1 {
+    position: relative;
+    top: 7%;
+    text-align: center;
+    img{
+      max-width: 300px;
+    }
+    .content-text{
+      margin: auto;
+      span{
+        text-align: center;
+        margin-top: 10px;
+        display: inline-block;
+      }
+      span:nth-child(1){
+        width: 210px;
+        padding-left: 15px;
+      }
+      span:nth-child(2){
+        width: 165px;
+      }
+    }
+  }
+  &-content2{
+    position: relative;
+    top: 10%;
+    text-align: center;
+    img{
+      width: 75%;
+    }
+  }
+
+}
+
+@media screen and (min-width: 770px) and (max-width: 1000px) {
+  .chainPage6-wrapper{
+    height: 630px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{content6}-wrapper {
+    height: 490px !important;
+    .@{content6} {
+      overflow: hidden;
+      width: 90%;
+      margin: auto;
+      > h1, > p {
+        position: relative;
+        top: auto;
+      }
+      > h1 {
+        margin: 40px auto 0;
+        font-size: 24px;
+      }
+      > h2{
+        margin-top: 0;
+        top: 0;
+        font-size: 18px;
+      }
+      &-content1{
+        top: 20px;
+        img{
+          width: 75%;
+          max-width: 265px;
+        }
+        .content-text{
+          span{
+            width: 50%;
+          }
+          span:nth-child(1){
+            padding-left: 5%;
+          }
+          span:nth-child(2){
+            text-align: center;
+          }
+        }
+      }
+      &-content2{
+        top: 50px;
+        img{
+          width: 100%;
+        }
+      }
+      &-content3{
+        top: 80px;
+        img{
+          width: 100%;
+        }
+      }
+      &-contentWrapper {
+        top: auto;
+        margin: 20px auto;
+        height: auto;
+        ul {
+          > li {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            display: block;
+            h1 {
+              font-size: 20px;
+            }
+            &.queue-anim-leaving {
+              position: relative !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@import '../../Home/less/custom.less';
+
+@content1: MediaPage1;
+
+#MediaPage1{
+  height: auto;
+  min-height: 850px;
+  background-color: #E9EAEC;
+}
+
+.@{content1} {
+  & > h1, & > p {
+    position: relative;
+    top: 10%;
+    text-align: center;
+  }
+  &-img-wrapper {
+    width: 94%;
+    background-color: #ffffff;
+    display: inline-block;
+    margin: 50px 3%;
+    padding: 20px 0;
+    & li {
+      width: 100%;
+      padding: 2% 5%;
+      overflow: hidden;
+      & .content-wrapper {
+        margin: auto;
+        display: block;
+        background: #fff;
+        text-align: center;
+        min-height: 250px;
+        padding-left: 300px;
+        position: relative;
+        overflow: hidden;
+        img{
+          position: absolute;
+          left: 0;
+          border-radius: 6px;
+          width: 300px;
+          height: auto;
+        }
+        & h2{
+          font-size: 18px;
+          color: #222;
+          padding: 10px 0;
+        }
+        & p{
+          font-size: 16px;
+          text-indent: 40px;
+          line-height: 30px;
+          color: #909090;
+        }
+        & span{
+          font-size: 15px;
+          color: #909090;
+          display: inline-block;
+          margin-top: 20px !important;
+        }
+        & p,h2,span {
+          width: 86%;
+          margin: auto;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{content1}-wrapper {
+    overflow: hidden;
+    .@{content1} {
+      width: 90%;
+      > h1, > p {
+        position: relative;
+        top: 0;
+      }
+      > h1 {
+        font-size: 24px;
+        margin: 40px auto 20px;
+      }
+      &-img-wrapper {
+        li {
+          margin-bottom: 20px;
+          .content-wrapper {
+            padding-left: 0;
+            height: auto;
+            img{
+              position: relative;
+              height: 70%;
+              width: 100%;
+              left: 0;
+              right: 0;
+              margin: auto;
+            }
+            .title{
+              font-size: 16px;
+            }
+            .content{
+              font-size: 14px;
+              line-height: 24px;
+            }
+            .date{
+              margin-top: 10px;
+            }
+            p{
+              width: 85%;
+            }
+          }
+        }
+      }
+
+
+    }
+
+
+  }
+
+}
