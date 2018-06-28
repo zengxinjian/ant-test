@@ -2,20 +2,12 @@ import React from 'react';
 import {Router, Route, Switch} from 'dva/router';
 import App from '../../routes/PCContainer';
 import Home from '../../routes/Home';
-import About from '../../routes/About';
-import Project from '../../routes/Project';
-import Media from '../../routes/Media';
-import Details from '../../routes/Details';
 
 export default ({history, app}) => {
   return (
     <App>
       <Router history={history}>
         <Switch>
-          <Route path="/about" exact component={About} />
-          <Route path="/project" exact component={Project} />
-          <Route path="/media" exact component={Media} />
-          <Route path="/details/:id" exact component={Details} />
           <Route path="/" exact component={Home} />
         </Switch>
       </Router>
