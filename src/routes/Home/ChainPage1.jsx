@@ -22,6 +22,10 @@ class Banner extends React.Component {
           key="bg"
         />
       </Element>);
+
+
+
+
     });
     const width=window.innerWidth;
     const heigth=width*900/1920;
